@@ -9,9 +9,6 @@ import interfacess.ISmartCamera;
 import interfacess.ISmartLight;
 import interfacess.ISmartThermostat;
 
-//	class SmartHomeUserInterface {
-	
-
 public class UnifiedSmartHomeUserInterface {
 	private SmartHomeController controller;
 
@@ -42,7 +39,7 @@ public class UnifiedSmartHomeUserInterface {
 		public void executeDeviceAction(int deviceId, String action) {
 			AbstractSmartDevice device = controller.findDeviceById(deviceId);
 			if (device == null) {
-				System.out.println("Device with ID " + deviceId + " not found in the system.");
+				System.out.println("Device with ID " + deviceId + " not found in system");
 				return;
 			}
 
@@ -51,7 +48,7 @@ public class UnifiedSmartHomeUserInterface {
 						if (device instanceof ISmartLight) {
 							((ISmartLight) device).turnOn();
 						} else {
-							System.out.println("Device with ID " + deviceId + " does not support the 'turnOn' action.");
+							System.out.println("Device with ID " + deviceId + " does not support 'turnOn' action");
 						}
 						break;
 				
@@ -59,7 +56,7 @@ public class UnifiedSmartHomeUserInterface {
 						if (device instanceof ISmartLight) {
 							((ISmartLight) device).turnOff();
 						} else {
-							System.out.println("Device with ID " + deviceId + " does not support the 'turnOff' action.");
+							System.out.println("Device with ID " + deviceId + " does not support 'turnOff' action");
 						}
 						break;
     
@@ -70,7 +67,7 @@ public class UnifiedSmartHomeUserInterface {
 							int brightness = sc.nextInt();
 							((ISmartLight) device).setBrightness(brightness);
 						} else {
-							System.out.println("Device with ID " + deviceId + " does not support the 'setBrightness' action.");
+							System.out.println("Device with ID " + deviceId + " does not support 'setBrightness' action");
 						}
 						break;
 						
@@ -81,7 +78,7 @@ public class UnifiedSmartHomeUserInterface {
 							int temperature = sc.nextInt();
 							((ISmartThermostat) device).setTemperature(temperature);
 						} else {
-							System.out.println("Device with ID " + deviceId + " does not support the 'setTemperature' action.");
+							System.out.println("Device with ID " + deviceId + " does not support 'setTemperature' action");
 						}
 						break;
     
@@ -89,7 +86,7 @@ public class UnifiedSmartHomeUserInterface {
 						if (device instanceof ISmartCamera) {
 							((ISmartCamera) device).startRecording();
 						} else {
-							System.out.println("Device with ID " + deviceId + " does not support the 'startRecording' action.");
+							System.out.println("Device with ID " + deviceId + " does not support 'startRecording' action");
 						}
 						break;
     
@@ -97,7 +94,7 @@ public class UnifiedSmartHomeUserInterface {
 						if (device instanceof ISmartCamera) {
 							((ISmartCamera) device).stopRecording();
 						} else {
-							System.out.println("Device with ID " + deviceId + " does not support the 'stopRecording' action.");
+							System.out.println("Device with ID " + deviceId + " does not support 'stopRecording' action");
 						}
 						break;
     
@@ -105,7 +102,7 @@ public class UnifiedSmartHomeUserInterface {
 						if (device instanceof ISmartCamera) {
 							((ISmartCamera) device).takePicture();
 						} else {
-							System.out.println("Device with ID " + deviceId + " does not support the 'takePicture' action.");
+							System.out.println("Device with ID " + deviceId + " does not support 'takePicture' action");
 						}
 						break;
 					
