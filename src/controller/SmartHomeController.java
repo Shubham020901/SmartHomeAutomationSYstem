@@ -13,22 +13,22 @@ public class SmartHomeController {
 	        for (int i = 0; i < devices.length; i++) {
             if (devices[i] == null) {
                 devices[i] = device;
-                System.out.println("Device " + device.getDeviceName() + " added to the system.");
+                System.out.println("Device " + device.getDeviceName() + " added in system");
 	                return;
 	            }
 	        }
-	        System.out.println("Device array is full. Cannot add more devices.");
+	        System.out.println("Device array is full. do not add more devices");
 	    }
 	    
 	    public void removeDevice(int deviceId) {
 	        for (int i = 0; i < devices.length; i++) {
 	            if (devices[i] != null && devices[i].getDeviceId() == deviceId) {
 	                devices[i] = null;
-	                System.out.println("Device with ID " + deviceId + " removed from the system.");
+	                System.out.println("Device with ID " + deviceId + " removed from system");
 	                return;
 	            }
 	        }
-	        System.out.println("Device with ID " + deviceId + " not found in the system.");
+	        System.out.println("Device with ID " + deviceId + " not found in system");
 	    }
 	    
 	    public AbstractSmartDevice findDeviceById(int deviceId) {
